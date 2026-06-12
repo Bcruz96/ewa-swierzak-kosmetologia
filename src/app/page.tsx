@@ -13,7 +13,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/assets/images/hero-bg.jpg"
-            alt="Luxury Dental Clinic"
+            alt="Ewa Świerżak Kosmetologia"
             fill
             className="object-cover"
             priority
@@ -24,42 +24,42 @@ export default function Home() {
         {/* Hero Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-screen flex items-center">
           <div className="max-w-2xl">
-            <motion.h1 
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="font-heading text-5xl sm:text-6xl lg:text-7xl text-white leading-tight mb-6"
             >
-              Experience Luxury
-              <span className="block">Dental Care</span>
+              Luksusowa
+              <span className="block">Kosmetologia</span>
             </motion.h1>
-            
-            <motion.p 
+
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="font-body text-lg sm:text-xl text-white mb-8 leading-relaxed"
             >
-              Where artistry meets dentistry. Discover a new standard of dental excellence in Beverly Hills.
+              Gdzie sztuka spotyka pielęgnację. Odkryj nowy standard piękna i doskonałej kosmetologii.
             </motion.p>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Link 
+              <Link
                 href="/appointment"
                 className="inline-block bg-primary-gold hover:bg-primary-gold text-black font-ui text-sm tracking-wide px-8 py-4 rounded-full transition-all duration-300"
               >
-                Book Your Visit
+                Umów wizytę
               </Link>
-              <Link 
+              <Link
                 href="/services"
                 className="inline-block bg-white hover:bg-white text-black font-ui text-sm tracking-wide px-8 py-4 rounded-full transition-all duration-300"
               >
-                Explore Services
+                Nasze usługi
               </Link>
             </motion.div>
           </div>
@@ -71,21 +71,21 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="font-heading text-4xl text-black mb-6">Welcome to WhitePearl Dental</h2>
+              <h2 className="font-heading text-4xl text-black mb-6">Witamy w Ewa Świerżak Kosmetologia</h2>
               <p className="font-body text-lg text-black mb-8 leading-relaxed">
-                At WhitePearl, we believe in delivering more than just dental care we create confident smiles that leave lasting impressions. Our state-of-the-art facility combines luxury with cutting-edge technology to provide an unparalleled dental experience.
+                W naszym salonie wierzymy, że prawdziwe piękno bierze się z troski i dbałości o każdy detal. Łączymy luksusową atmosferę z najnowocześniejszymi zabiegami kosmetologicznymi, aby zapewnić Ci wyjątkowe doznania i widoczne rezultaty.
               </p>
-              <Link 
+              <Link
                 href="/about"
                 className="inline-block border-2 border-primary-gold text-primary-gold hover:bg-primary-gold hover:text-white font-ui text-sm tracking-wide px-8 py-3 transition-all duration-300"
               >
-                Learn More About Us
+                Poznaj nas bliżej
               </Link>
             </div>
             <div className="relative h-[600px]">
               <Image
                 src="/assets/images/welcome.jpg"
-                alt="Luxury Dental Office"
+                alt="Salon Ewa Świerżak Kosmetologia"
                 fill
                 className="object-cover rounded-lg"
               />
@@ -98,28 +98,27 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-heading text-4xl text-black mb-4">Our Premium Services</h2>
+            <h2 className="font-heading text-4xl text-black mb-4">Nasze zabiegi</h2>
             <p className="font-body text-lg text-black max-w-2xl mx-auto">
-              Experience comprehensive dental care with our range of specialized services
+              Szeroki wybór profesjonalnych zabiegów kosmetologicznych dopasowanych do Twoich potrzeb
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Service Cards */}
             {[
               {
-                title: "Cosmetic Dentistry",
-                description: "Transform your smile with our advanced cosmetic procedures",
+                title: "Pielęgnacja twarzy",
+                description: "Profesjonalne zabiegi pielęgnacyjne przywracające skórze blask i młodość",
                 image: "/assets/images/cosmetic.jpg"
               },
               {
-                title: "Dental Implants",
-                description: "Restore your smile with permanent, natural-looking solutions",
-                image: "/assets/images/implants.jpg"
+                title: "Makijaż permanentny",
+                description: "Trwały makijaż ust i brwi dla perfekcyjnego wyglądu każdego dnia",
+                image: "/assets/images/smile-design.jpg"
               },
               {
-                title: "Smile Design",
-                description: "Custom smile makeovers tailored to your unique features",
-                image: "/assets/images/smile-design.jpg"
+                title: "Stylizacja rzęs",
+                description: "Przedłużanie i lifting rzęs dla głębokiego, wyrazistego spojrzenia",
+                image: "/assets/images/cosmetic.jpg"
               }
             ].map((service, index) => (
               <motion.div
@@ -140,11 +139,11 @@ export default function Home() {
                 <div className="p-6">
                   <h3 className="font-heading text-xl text-black mb-2">{service.title}</h3>
                   <p className="font-body text-black mb-4">{service.description}</p>
-                  <Link 
+                  <Link
                     href="/services"
                     className="text-primary-gold hover:text-primary-gold font-ui text-sm tracking-wide transition-colors duration-300"
                   >
-                    Learn More →
+                    Dowiedz się więcej →
                   </Link>
                 </div>
               </motion.div>
@@ -158,10 +157,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { number: "15+", label: "Years of Excellence" },
-              { number: "10k+", label: "Smiles Transformed" },
-              { number: "50+", label: "Awards Won" },
-              { number: "100%", label: "Patient Satisfaction" }
+              { number: "10+", label: "Lat doświadczenia" },
+              { number: "500+", label: "Zadowolonych klientek" },
+              { number: "20+", label: "Rodzajów zabiegów" },
+              { number: "100%", label: "Satysfakcja klientek" }
             ].map((stat, index) => (
               <motion.div
                 key={index}
@@ -182,27 +181,27 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-heading text-4xl text-black mb-4">Patient Testimonials</h2>
+            <h2 className="font-heading text-4xl text-black mb-4">Opinie klientek</h2>
             <p className="font-body text-lg text-black max-w-2xl mx-auto">
-              Hear what our valued patients have to say about their experience
+              Przeczytaj, co mówią nasze klientki o swoich doświadczeniach w salonie
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                name: "Sarah Johnson",
-                text: "The level of care and attention to detail at WhitePearl is exceptional. I couldn&apos;t be happier with my results!",
-                role: "Executive"
+                name: "Anna Kowalska",
+                text: "Poziom obsługi i dbałość o każdy detal są wyjątkowe. Jestem zachwycona efektami i na pewno wrócę!",
+                role: "Menadżerka"
               },
               {
-                name: "Michael Chen",
-                text: "A truly luxurious dental experience. The team made me feel comfortable and confident throughout my treatment.",
-                role: "Entrepreneur"
+                name: "Marta Wiśniewska",
+                text: "Prawdziwie luksusowe doświadczenie. Zespół sprawił, że poczułam się komfortowo i zadbana od pierwszej chwili.",
+                role: "Przedsiębiorczyni"
               },
               {
-                name: "Emma Davis",
-                text: "From the moment you walk in, you know you're in good hands. The results exceeded my expectations!",
-                role: "Artist"
+                name: "Karolina Nowak",
+                text: "Od momentu wejścia czujesz, że jesteś w dobrych rękach. Efekty przerosły moje oczekiwania!",
+                role: "Artystka"
               }
             ].map((testimonial, index) => (
               <motion.div
@@ -229,15 +228,15 @@ export default function Home() {
       {/* CTA Section */}
       <section className="relative py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-heading text-4xl text-white mb-6">Ready to Transform Your Smile?</h2>
+          <h2 className="font-heading text-4xl text-white mb-6">Gotowa na wyjątkową pielęgnację?</h2>
           <p className="font-body text-lg text-white mb-8 max-w-2xl mx-auto">
-            Schedule your consultation today and take the first step towards your dream smile.
+            Umów się na konsultację i zrób pierwszy krok w kierunku piękna, na jakie zasługujesz.
           </p>
-          <Link 
+          <Link
             href="/appointment"
             className="inline-block bg-primary-gold hover:bg-primary-gold text-black font-ui text-sm tracking-wide px-12 py-4 rounded-full transition-all duration-300"
           >
-            Book Your Consultation
+            Umów wizytę
           </Link>
         </div>
       </section>

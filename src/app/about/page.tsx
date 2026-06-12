@@ -6,48 +6,48 @@ import { motion } from "framer-motion";
 
 const values = [
   {
-    title: "Excellence",
-    description: "We maintain the highest standards in dental care, utilizing state-of-the-art technology and advanced techniques.",
+    title: "Doskonałość",
+    description: "Dbamy o najwyższą jakość każdego zabiegu, korzystając z najnowocześniejszych metod i sprawdzonych preparatów.",
     icon: "/assets/icons/excellence.svg"
   },
   {
-    title: "Luxury Experience",
-    description: "Every detail of your visit is crafted to provide an unparalleled level of comfort and sophistication.",
+    title: "Luksusowe doznania",
+    description: "Każda wizyta w naszym salonie to wyjątkowe przeżycie — zadbamy o Twój komfort i relaks na każdym kroku.",
     icon: "/assets/icons/luxury.svg"
   },
   {
-    title: "Patient-Focused",
-    description: "Your unique needs and desires are at the center of our personalized treatment approach.",
+    title: "Indywidualne podejście",
+    description: "Twoje unikalne potrzeby i oczekiwania są dla nas priorytetem. Każdy zabieg dobieramy indywidualnie.",
     icon: "/assets/icons/patient.svg"
   },
   {
-    title: "Innovation",
-    description: "We continuously invest in the latest dental technologies to ensure optimal treatment outcomes.",
+    title: "Innowacje",
+    description: "Nieustannie śledzimy trendy i inwestujemy w nowoczesne technologie, by zapewnić Ci najlepsze efekty.",
     icon: "/assets/icons/innovation.svg"
   }
 ];
 
 const team = [
   {
-    name: "Dr. Sarah Mitchell",
-    role: "Lead Cosmetic Dentist",
-    description: "With over 15 years of experience in cosmetic dentistry, Dr. Mitchell leads our team with expertise in smile transformations.",
+    name: "Ewa Świerżak",
+    role: "Kosmetolog dyplomowany / Właścicielka",
+    description: "Pasjonatka kosmetologii z wieloletnim doświadczeniem. Specjalizuje się w zabiegach pielęgnacyjnych twarzy i makijażu permanentnym. Stale podnosi swoje kwalifikacje na szkoleniach krajowych i zagranicznych.",
     image: "/assets/images/team/dr-mitchell.jpg",
-    credentials: "DDS, AAACD"
+    credentials: "Dyplomowany kosmetolog"
   },
   {
-    name: "Dr. James Chen",
-    role: "Implant Specialist",
-    description: "A renowned expert in dental implants and reconstructive dentistry with numerous international certifications.",
+    name: "Marta Kowalczyk",
+    role: "Specjalistka makijażu permanentnego",
+    description: "Ekspertka w dziedzinie makijażu permanentnego brwi i ust. Jej precyzja i artystyczne oko gwarantują naturalny, perfekcyjny efekt dopasowany do rysów twarzy każdej klientki.",
     image: "/assets/images/team/dr-chen.jpg",
-    credentials: "DMD, PhD"
+    credentials: "Certyfikowana techniczka PMU"
   },
   {
-    name: "Dr. Emily Parker",
-    role: "Orthodontist",
-    description: "Specializing in creating beautiful smiles through innovative orthodontic treatments and Invisalign.",
+    name: "Joanna Lewandowska",
+    role: "Stylistka rzęs i brwi",
+    description: "Specjalistka przedłużania rzęs, liftingu oraz stylizacji brwi. Jej zabiegi podkreślają naturalną urodę klientek i nadają spojrzeniu wyrazistości przez długie tygodnie.",
     image: "/assets/images/team/dr-parker.jpg",
-    credentials: "DDS, MS"
+    credentials: "Certyfikowana stylistka rzęs"
   }
 ];
 
@@ -59,25 +59,25 @@ export default function About() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/assets/images/about-hero.jpg"
-            alt="WhitePearl Dental Clinic"
+            alt="Ewa Świerżak Kosmetologia"
             fill
             className="object-cover opacity-50"
             priority
           />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-white mb-6">
-              Excellence in
-              <span className="block">Dental Care</span>
+              Piękno i
+              <span className="block">Ekspertyza</span>
             </h1>
             <p className="font-body text-lg text-white mb-8 leading-relaxed">
-              At WhitePearl, we combine artistry with advanced dentistry to deliver exceptional care in a luxurious environment.
+              W Ewa Świerżak Kosmetologia łączymy pasję do piękna z profesjonalną wiedzą, tworząc wyjątkowe miejsce dla wymagających klientek.
             </p>
           </motion.div>
         </div>
@@ -87,26 +87,26 @@ export default function About() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="font-heading text-3xl lg:text-4xl text-black mb-6">Our Legacy of Excellence</h2>
+              <h2 className="font-heading text-3xl lg:text-4xl text-black mb-6">Nasza historia</h2>
               <div className="space-y-6">
                 <p className="font-body text-black">
-                  Founded in 2008, WhitePearl Dental Clinic has established itself as Beverly Hills&apos; premier destination for luxury dental care. Our journey began with a vision to transform the dental experience into something extraordinary.
+                  Ewa Świerżak Kosmetologia to salon stworzony z pasji do piękna i głębokiego przekonania, że każda kobieta zasługuje na profesjonalną, luksusową pielęgnację. Od pierwszego dnia naszą misją jest dostarczanie zabiegów na najwyższym poziomie.
                 </p>
                 <p className="font-body text-black">
-                  Over the years, we&apos;ve consistently invested in cutting-edge technology and assembled a team of world-class professionals, setting new standards in dental excellence.
+                  Przez lata nieustannie inwestowałyśmy w wiedzę, sprzęt i sprawdzone preparaty, budując zespół ekspertek gotowych sprostać każdemu wyzwaniu kosmetologicznemu.
                 </p>
                 <p className="font-body text-black">
-                  Today, we&apos;re proud to be recognized as a leader in cosmetic and restorative dentistry, serving clients who expect nothing but the best.
+                  Dziś jesteśmy dumne z grona zaufanych klientek, które wracają do nas regularnie — bo wiedzą, że są tu w najlepszych rękach.
                 </p>
               </div>
             </motion.div>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -115,7 +115,7 @@ export default function About() {
             >
               <Image
                 src="/assets/images/clinic-exterior.jpg"
-                alt="WhitePearl Dental Clinic Exterior"
+                alt="Salon Ewa Świerżak Kosmetologia"
                 fill
                 className="object-cover"
               />
@@ -128,9 +128,9 @@ export default function About() {
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-heading text-3xl lg:text-4xl text-white mb-6">Our Core Values</h2>
+            <h2 className="font-heading text-3xl lg:text-4xl text-white mb-6">Nasze wartości</h2>
             <p className="font-body text-lg text-white max-w-2xl mx-auto">
-              These principles guide every aspect of our practice, ensuring we deliver the highest standard of care.
+              Te zasady kierują każdym aspektem naszej pracy i gwarantują, że zawsze otrzymasz obsługę najwyższej klasy.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -163,9 +163,9 @@ export default function About() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-heading text-3xl lg:text-4xl text-black mb-6">Meet Our Expert Team</h2>
+            <h2 className="font-heading text-3xl lg:text-4xl text-black mb-6">Nasz zespół</h2>
             <p className="font-body text-lg text-black max-w-2xl mx-auto">
-              Our team of highly skilled professionals is committed to providing you with exceptional care.
+              Zgrany zespół ekspertek, dla których piękno i satysfakcja klientek to najważniejsze priorytety.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -202,29 +202,29 @@ export default function About() {
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="font-heading text-3xl lg:text-4xl text-white mb-6">State-of-the-Art Facility</h2>
+              <h2 className="font-heading text-3xl lg:text-4xl text-white mb-6">Nowoczesny salon</h2>
               <div className="space-y-6">
                 <p className="font-body text-white">
-                  Our clinic is equipped with the latest dental technology and designed to provide a comfortable, luxurious experience. From our elegant reception area to our advanced treatment rooms, every space is crafted with your comfort in mind.
+                  Nasz salon wyposażony jest w najnowocześniejszy sprzęt kosmetologiczny i zaprojektowany tak, aby każda wizyta była prawdziwą przyjemnością. Od eleganckiej recepcji po profesjonalne gabinety — każde miejsce stworzone jest z myślą o Twoim komforcie.
                 </p>
                 <p className="font-body text-white">
-                  We maintain the highest standards of sterilization and safety, ensuring a pristine environment for every procedure.
+                  Przestrzegamy najwyższych standardów higieny i sterylizacji, dbając o Twoje bezpieczeństwo podczas każdego zabiegu.
                 </p>
-                <Link 
+                <Link
                   href="/gallery"
                   className="inline-block bg-primary-gold hover:bg-primary-gold text-black font-ui text-sm tracking-wide px-8 py-4 rounded-full transition-all duration-300 mt-4"
                 >
-                  View Our Gallery
+                  Zobacz galerię
                 </Link>
               </div>
             </motion.div>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -234,7 +234,7 @@ export default function About() {
               <div className="relative h-48 rounded-lg overflow-hidden">
                 <Image
                   src="/assets/images/facility-1.jpg"
-                  alt="Reception Area"
+                  alt="Recepcja salonu"
                   fill
                   className="object-cover"
                 />
@@ -242,7 +242,7 @@ export default function About() {
               <div className="relative h-48 rounded-lg overflow-hidden">
                 <Image
                   src="/assets/images/facility-2.jpg"
-                  alt="Treatment Room"
+                  alt="Gabinet zabiegowy"
                   fill
                   className="object-cover"
                 />
@@ -250,7 +250,7 @@ export default function About() {
               <div className="relative h-48 rounded-lg overflow-hidden">
                 <Image
                   src="/assets/images/facility-3.jpg"
-                  alt="Advanced Equipment"
+                  alt="Nowoczesny sprzęt"
                   fill
                   className="object-cover"
                 />
@@ -258,7 +258,7 @@ export default function About() {
               <div className="relative h-48 rounded-lg overflow-hidden">
                 <Image
                   src="/assets/images/facility-4.jpg"
-                  alt="Consultation Room"
+                  alt="Pokój konsultacyjny"
                   fill
                   className="object-cover"
                 />
@@ -272,19 +272,19 @@ export default function About() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-heading text-3xl lg:text-4xl text-black mb-6">
-            Experience the WhitePearl Difference
+            Poczuj różnicę Ewa Świerżak Kosmetologia
           </h2>
           <p className="font-body text-lg text-black mb-8 max-w-2xl mx-auto">
-            Join us for a consultation and discover why we&apos;re Beverly Hills&apos; premier choice for luxury dental care.
+            Umów się na konsultację i odkryj, dlaczego nasze klientki wracają do nas z uśmiechem.
           </p>
-          <Link 
+          <Link
             href="/appointment"
             className="inline-block bg-black hover:bg-black text-white font-ui text-sm tracking-wide px-12 py-4 rounded-full transition-all duration-300"
           >
-            Schedule Your Visit
+            Umów wizytę
           </Link>
         </div>
       </section>
     </main>
   );
-} 
+}

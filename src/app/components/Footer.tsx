@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { RiMapPin2Line, RiPhoneLine, RiMailLine, RiInstagramLine, RiFacebookLine, RiTwitterXLine, RiGithubLine } from 'react-icons/ri';
+import { RiMapPin2Line, RiPhoneLine, RiMailLine, RiInstagramLine, RiFacebookLine } from 'react-icons/ri';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,13 +11,13 @@ export default function Footer() {
     <footer className="bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          {/* Clinic Info */}
+          {/* Salon Info */}
           <div className="space-y-4">
             <h3 className="font-heading text-2xl text-white">
-              WhitePearl
+              Ewa Świerżak Kosmetologia
             </h3>
             <p className="font-body text-sm text-white">
-              Luxury dental care for those who appreciate excellence in dental health and aesthetics.
+              Luksusowy salon kosmetyczny oferujący profesjonalne zabiegi pielęgnacyjne dla wymagających klientek.
             </p>
             <div className="flex space-x-4">
               <motion.a
@@ -26,6 +26,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary-gold hover:opacity-80 transition-opacity"
+                aria-label="Instagram zostanie dodany wkrótce"
               >
                 <RiInstagramLine className="w-6 h-6" />
               </motion.a>
@@ -38,54 +39,36 @@ export default function Footer() {
               >
                 <RiFacebookLine className="w-6 h-6" />
               </motion.a>
-              <motion.a
-                whileHover={{ y: -2 }}
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary-gold hover:opacity-80 transition-opacity"
-              >
-                <RiTwitterXLine className="w-6 h-6" />
-              </motion.a>
-              <motion.a
-                whileHover={{ y: -2 }}
-                href="https://github.com/Ruhanpaco/dental-clinic"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary-gold hover:opacity-80 transition-opacity"
-              >
-                <RiGithubLine className="w-6 h-6" />
-              </motion.a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-heading text-xl mb-4 text-white">Quick Links</h4>
+            <h4 className="font-heading text-xl mb-4 text-white">Szybkie linki</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="/services" className="font-ui text-sm text-white hover:text-primary-gold transition-colors">
-                  Our Services
+                  Nasze usługi
                 </Link>
               </li>
               <li>
                 <Link href="/about" className="font-ui text-sm text-white hover:text-primary-gold transition-colors">
-                  About Us
+                  O nas
                 </Link>
               </li>
               <li>
                 <Link href="/gallery" className="font-ui text-sm text-white hover:text-primary-gold transition-colors">
-                  Smile Gallery
+                  Galeria
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="font-ui text-sm text-white hover:text-primary-gold transition-colors">
-                  Contact Us
+                  Kontakt
                 </Link>
               </li>
               <li>
                 <Link href="/appointment" className="font-ui text-sm text-white hover:text-primary-gold transition-colors">
-                  Book Appointment
+                  Umów wizytę
                 </Link>
               </li>
             </ul>
@@ -93,24 +76,24 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-heading text-xl mb-4 text-white">Contact Us</h4>
+            <h4 className="font-heading text-xl mb-4 text-white">Kontakt</h4>
             <ul className="space-y-4">
               <li className="flex items-center space-x-3">
-                <RiMapPin2Line className="w-5 h-5 text-primary-gold" />
+                <RiMapPin2Line className="w-5 h-5 text-primary-gold flex-shrink-0" />
                 <span className="font-ui text-sm text-white">
-                  123 Luxury Lane, Beverly Hills, CA 90210
+                  Dokładny adres zostanie podany wkrótce
                 </span>
               </li>
               <li className="flex items-center space-x-3">
-                <RiPhoneLine className="w-5 h-5 text-primary-gold" />
-                <a href="tel:+1234567890" className="font-ui text-sm text-white hover:text-primary-gold transition-colors">
-                  (123) 456-7890
+                <RiPhoneLine className="w-5 h-5 text-primary-gold flex-shrink-0" />
+                <a href="tel:+48000000000" className="font-ui text-sm text-white hover:text-primary-gold transition-colors">
+                  +48 000 000 000
                 </a>
               </li>
               <li className="flex items-center space-x-3">
-                <RiMailLine className="w-5 h-5 text-primary-gold" />
-                <a href="mailto:info@whitepearl.com" className="font-ui text-sm text-white hover:text-primary-gold transition-colors">
-                  info@whitepearl.com
+                <RiMailLine className="w-5 h-5 text-primary-gold flex-shrink-0" />
+                <a href="mailto:kontakt@ewaswierzak.pl" className="font-ui text-sm text-white hover:text-primary-gold transition-colors">
+                  kontakt@ewaswierzak.pl
                 </a>
               </li>
             </ul>
@@ -120,30 +103,10 @@ export default function Footer() {
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-primary-gold/20">
           <p className="text-center text-sm font-ui text-white">
-            © {currentYear} WhitePearl Dental Clinic. All rights reserved.
-          </p>
-          <p className="text-center text-sm font-ui text-white mt-2">
-            Made with ❤️ by <a 
-              href="https://www.ruhanpacolli.online/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-primary-gold hover:opacity-80 transition-opacity"
-            >
-              Ruhan Pacolli
-            </a>
-          </p>
-          <p className="text-center text-sm font-ui text-white/80 mt-1">
-            <a 
-              href="https://dental-clinic-ivory.vercel.app/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-primary-gold hover:opacity-80 transition-opacity"
-            >
-              View Live Demo
-            </a>
+            © {currentYear} Ewa Świerżak Kosmetologia. Wszelkie prawa zastrzeżone.
           </p>
         </div>
       </div>
     </footer>
   );
-} 
+}

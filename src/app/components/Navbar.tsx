@@ -6,11 +6,11 @@ import { motion } from 'framer-motion';
 import { RiMenu4Line, RiCloseLine } from 'react-icons/ri';
 
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/services', label: 'Services' },
-  { href: '/about', label: 'About' },
-  { href: '/gallery', label: 'Gallery' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/', label: 'Strona główna' },
+  { href: '/services', label: 'Usługi' },
+  { href: '/about', label: 'O nas' },
+  { href: '/gallery', label: 'Galeria' },
+  { href: '/contact', label: 'Kontakt' },
 ];
 
 export default function Navbar() {
@@ -30,7 +30,7 @@ export default function Navbar() {
               whileHover={{ scale: 1.02 }}
               className="text-3xl font-heading font-normal text-black tracking-wide"
             >
-              WhitePearl
+              Ewa Świerżak
             </motion.span>
           </Link>
 
@@ -57,7 +57,7 @@ export default function Navbar() {
                 href="/appointment"
                 className="font-ui text-sm px-6 py-3 bg-black text-white hover:bg-primary-gold transition-all duration-300 rounded-full tracking-wide"
               >
-                Book Appointment
+                Umów wizytę
               </Link>
             </motion.div>
           </div>
@@ -110,7 +110,7 @@ export default function Navbar() {
               className="block w-full text-center font-ui text-sm px-6 py-3 bg-black text-white hover:bg-primary-gold transition-all duration-300 rounded-full tracking-wide"
               onClick={() => setIsOpen(false)}
             >
-              Book Appointment
+              Umów wizytę
             </Link>
           </motion.div>
         </div>

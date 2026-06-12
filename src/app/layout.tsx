@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Dental Clinic - Demo",
-  description: "Luxury dental clinic website featuring elegant design with Next.js, TailwindCSS, and seamless appointment booking system. Built with modern tech stack and premium aesthetics.",
+  title: "Ewa Świerżak Kosmetologia",
+  description: "Luksusowy salon kosmetyczny Ewa Świerżak Kosmetologia. Profesjonalne zabiegi pielęgnacyjne, makijaż permanentny, stylizacja rzęs i wiele więcej.",
 };
 
 export default function RootLayout({
@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pl">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

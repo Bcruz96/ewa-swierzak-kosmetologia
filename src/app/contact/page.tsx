@@ -3,16 +3,16 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { RiMapPin2Line, RiPhoneLine, RiMailLine, RiTimeLine, RiInstagramLine, RiFacebookLine, RiTwitterXLine } from 'react-icons/ri';
+import { RiMapPin2Line, RiPhoneLine, RiMailLine, RiTimeLine, RiInstagramLine, RiFacebookLine } from 'react-icons/ri';
 
 const businessHours = [
-  { day: "Monday", hours: "9:00 AM - 6:00 PM" },
-  { day: "Tuesday", hours: "9:00 AM - 6:00 PM" },
-  { day: "Wednesday", hours: "9:00 AM - 6:00 PM" },
-  { day: "Thursday", hours: "9:00 AM - 6:00 PM" },
-  { day: "Friday", hours: "9:00 AM - 4:00 PM" },
-  { day: "Saturday", hours: "By Appointment" },
-  { day: "Sunday", hours: "Closed" }
+  { day: "Poniedziałek", hours: "9:00 – 18:00" },
+  { day: "Wtorek", hours: "9:00 – 18:00" },
+  { day: "Środa", hours: "9:00 – 18:00" },
+  { day: "Czwartek", hours: "9:00 – 18:00" },
+  { day: "Piątek", hours: "9:00 – 16:00" },
+  { day: "Sobota", hours: "Na umówienie" },
+  { day: "Niedziela", hours: "Nieczynne" }
 ];
 
 export default function Contact() {
@@ -26,7 +26,6 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
     console.log(formData);
   };
 
@@ -44,7 +43,7 @@ export default function Contact() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/assets/images/contact-hero.jpg"
-            alt="Contact WhitePearl Dental"
+            alt="Kontakt Ewa Świerżak Kosmetologia"
             fill
             className="object-cover opacity-30"
             priority
@@ -52,21 +51,21 @@ export default function Contact() {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <motion.h1 
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="font-heading text-4xl md:text-5xl lg:text-6xl text-white mb-6"
             >
-              Get in Touch
+              Skontaktuj się z nami
             </motion.h1>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="font-body text-lg text-white max-w-3xl mx-auto"
             >
-              We&apos;re here to help with any questions you may have about our services.
+              Chętnie odpowiemy na Twoje pytania dotyczące naszych zabiegów i usług.
             </motion.p>
           </div>
         </div>
@@ -84,12 +83,12 @@ export default function Contact() {
               viewport={{ once: true }}
               className="bg-white p-8 rounded-lg border border-primary-gold"
             >
-              <h2 className="font-heading text-3xl text-black mb-6">Send Us a Message</h2>
+              <h2 className="font-heading text-3xl text-black mb-6">Napisz do nas</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block font-ui text-sm text-black mb-2">
-                      Full Name
+                      Imię i nazwisko
                     </label>
                     <input
                       type="text"
@@ -103,7 +102,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <label htmlFor="email" className="block font-ui text-sm text-black mb-2">
-                      Email Address
+                      Adres e-mail
                     </label>
                     <input
                       type="email"
@@ -118,7 +117,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <label htmlFor="phone" className="block font-ui text-sm text-black mb-2">
-                    Phone Number
+                    Numer telefonu
                   </label>
                   <input
                     type="tel"
@@ -132,7 +131,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <label htmlFor="subject" className="block font-ui text-sm text-black mb-2">
-                    Subject
+                    Temat
                   </label>
                   <select
                     id="subject"
@@ -142,16 +141,16 @@ export default function Contact() {
                     className="w-full px-4 py-3 border border-primary-gold rounded-lg font-body text-black focus:outline-none focus:ring-2 focus:ring-primary-gold"
                     required
                   >
-                    <option value="">Select a subject</option>
-                    <option value="appointment">Book Appointment</option>
-                    <option value="consultation">Request Consultation</option>
-                    <option value="inquiry">General Inquiry</option>
-                    <option value="feedback">Feedback</option>
+                    <option value="">Wybierz temat</option>
+                    <option value="appointment">Umów wizytę</option>
+                    <option value="consultation">Zapytanie o zabieg</option>
+                    <option value="inquiry">Ogólne pytanie</option>
+                    <option value="feedback">Opinia</option>
                   </select>
                 </div>
                 <div>
                   <label htmlFor="message" className="block font-ui text-sm text-black mb-2">
-                    Message
+                    Wiadomość
                   </label>
                   <textarea
                     id="message"
@@ -167,7 +166,7 @@ export default function Contact() {
                   type="submit"
                   className="w-full bg-black text-white font-ui text-sm tracking-wide px-8 py-4 rounded-full hover:bg-primary-gold transition-all duration-300"
                 >
-                  Send Message
+                  Wyślij wiadomość
                 </button>
               </form>
             </motion.div>
@@ -182,30 +181,30 @@ export default function Contact() {
                 viewport={{ once: true }}
                 className="bg-white p-8 rounded-lg border border-primary-gold"
               >
-                <h3 className="font-heading text-2xl text-black mb-6">Contact Information</h3>
+                <h3 className="font-heading text-2xl text-black mb-6">Dane kontaktowe</h3>
                 <div className="space-y-6">
                   <div className="flex items-start">
                     <RiMapPin2Line className="w-6 h-6 text-primary-gold flex-shrink-0 mt-1" />
                     <div className="ml-4">
-                      <p className="font-ui text-sm text-black font-medium mb-1">Location</p>
-                      <p className="font-body text-black">123 Luxury Lane, Beverly Hills, CA 90210</p>
+                      <p className="font-ui text-sm text-black font-medium mb-1">Adres</p>
+                      <p className="font-body text-black">Dokładny adres zostanie podany wkrótce</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <RiPhoneLine className="w-6 h-6 text-primary-gold flex-shrink-0 mt-1" />
                     <div className="ml-4">
-                      <p className="font-ui text-sm text-black font-medium mb-1">Phone</p>
-                      <a href="tel:+1234567890" className="font-body text-black hover:text-primary-gold transition-colors">
-                        (123) 456-7890
+                      <p className="font-ui text-sm text-black font-medium mb-1">Telefon</p>
+                      <a href="tel:+48000000000" className="font-body text-black hover:text-primary-gold transition-colors">
+                        +48 000 000 000
                       </a>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <RiMailLine className="w-6 h-6 text-primary-gold flex-shrink-0 mt-1" />
                     <div className="ml-4">
-                      <p className="font-ui text-sm text-black font-medium mb-1">Email</p>
-                      <a href="mailto:info@whitepearl.com" className="font-body text-black hover:text-primary-gold transition-colors">
-                        info@whitepearl.com
+                      <p className="font-ui text-sm text-black font-medium mb-1">E-mail</p>
+                      <a href="mailto:kontakt@ewaswierzak.pl" className="font-body text-black hover:text-primary-gold transition-colors">
+                        kontakt@ewaswierzak.pl
                       </a>
                     </div>
                   </div>
@@ -222,7 +221,7 @@ export default function Contact() {
               >
                 <div className="flex items-center mb-6">
                   <RiTimeLine className="w-6 h-6 text-primary-gold" />
-                  <h3 className="font-heading text-2xl text-black ml-3">Business Hours</h3>
+                  <h3 className="font-heading text-2xl text-black ml-3">Godziny otwarcia</h3>
                 </div>
                 <div className="space-y-3">
                   {businessHours.map((schedule) => (
@@ -242,13 +241,14 @@ export default function Contact() {
                 viewport={{ once: true }}
                 className="bg-white p-8 rounded-lg border border-primary-gold"
               >
-                <h3 className="font-heading text-2xl text-black mb-6">Connect With Us</h3>
+                <h3 className="font-heading text-2xl text-black mb-6">Obserwuj nas</h3>
                 <div className="flex space-x-6">
                   <a
                     href="https://instagram.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary-gold hover:opacity-80 transition-opacity"
+                    aria-label="Instagram zostanie dodany wkrótce"
                   >
                     <RiInstagramLine className="w-8 h-8" />
                   </a>
@@ -260,14 +260,6 @@ export default function Contact() {
                   >
                     <RiFacebookLine className="w-8 h-8" />
                   </a>
-                  <a
-                    href="https://twitter.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary-gold hover:opacity-80 transition-opacity"
-                  >
-                    <RiTwitterXLine className="w-8 h-8" />
-                  </a>
                 </div>
               </motion.div>
             </div>
@@ -278,26 +270,14 @@ export default function Contact() {
       {/* Map Section */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="font-heading text-3xl text-white mb-4">Find Us</h2>
+          <div className="text-center">
+            <h2 className="font-heading text-3xl text-white mb-4">Znajdź nas</h2>
             <p className="font-body text-white">
-              Located in the heart of Beverly Hills, our clinic offers convenient access and valet parking.
+              Dokładna lokalizacja salonu zostanie podana wkrótce.
             </p>
-          </div>
-          <div className="relative h-[400px] rounded-lg overflow-hidden">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.7153676817196!2d-118.40034168478258!3d34.0736498808061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b93cca9c7ab1%3A0xe2ce30e735620d15!2sBeverly%20Hills%2C%20CA%2090210!5e0!3m2!1sen!2sus!4v1635000000000!5m2!1sen!2sus"
-              width="100%"
-              height="400"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="rounded-lg"
-            ></iframe>
           </div>
         </div>
       </section>
     </main>
   );
-} 
+}

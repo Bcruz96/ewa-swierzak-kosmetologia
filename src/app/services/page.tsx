@@ -6,303 +6,216 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 const categories = [
-  { id: "all", name: "All Services" },
-  { id: "cosmetic", name: "Cosmetic" },
-  { id: "restorative", name: "Restorative" },
-  { id: "preventive", name: "Preventive" },
-  { id: "surgical", name: "Surgical" },
-  { id: "orthodontic", name: "Orthodontic" },
-  { id: "pediatric", name: "Pediatric" },
-  { id: "periodontal", name: "Periodontal" },
-  { id: "endodontic", name: "Endodontic" },
-  { id: "technology", name: "Technology" }
+  { id: "all", name: "Wszystkie" },
+  { id: "twarz", name: "Twarz" },
+  { id: "cialo", name: "Ciało" },
+  { id: "makijaz", name: "Makijaż permanentny" },
+  { id: "rzesy", name: "Rzęsy i brwi" },
+  { id: "paznokcie", name: "Paznokcie" },
+  { id: "depilacja", name: "Depilacja" },
 ];
 
 const services = [
-  // Cosmetic Dentistry Services
+  // Twarz
   {
     id: 1,
-    title: "Porcelain Veneers",
-    description: "Transform your smile with custom-crafted porcelain veneers, designed to perfect your teeth's appearance.",
-    category: "cosmetic",
+    title: "Oczyszczanie twarzy",
+    description: "Głębokie oczyszczanie skóry usuwające zanieczyszczenia, nadmiar sebum i martwe komórki naskórka.",
+    category: "twarz",
     features: [
-      "Custom-designed for your smile",
-      "Natural-looking results",
-      "Stain-resistant material",
-      "Long-lasting beauty"
+      "Analiza skóry przed zabiegiem",
+      "Oczyszczanie manualne i ultradźwiękowe",
+      "Odpowiednia dla każdego typu cery",
+      "Natychmiastowy efekt świeżości"
     ],
     image: "/assets/images/cosmetic.jpg"
   },
   {
     id: 2,
-    title: "Professional Teeth Whitening",
-    description: "Achieve a brighter, more radiant smile with our advanced teeth whitening treatments.",
-    category: "cosmetic",
+    title: "Peeling chemiczny",
+    description: "Zabieg złuszczający wyrównujący koloryt, redukujący przebarwienia i wygładzający skórę twarzy.",
+    category: "twarz",
     features: [
-      "In-office power whitening",
-      "Take-home whitening kits",
-      "Lasting results",
-      "Safe and effective"
+      "Peeling kwasowy dopasowany do cery",
+      "Redukcja przebarwień i blizn",
+      "Stymulacja produkcji kolagenu",
+      "Widoczne efekty już po pierwszym zabiegu"
     ],
     image: "/assets/images/whitening.jpg"
   },
   {
     id: 3,
-    title: "Composite Bonding",
-    description: "Restore chipped, cracked, or discolored teeth with natural-looking composite materials.",
-    category: "cosmetic",
+    title: "Mikrodermabrazja",
+    description: "Mechaniczne złuszczanie skóry diamentową głowicą dla głębokiej odnowy i wygładzenia cery.",
+    category: "twarz",
     features: [
-      "Same-day results",
-      "Minimally invasive",
-      "Color-matched material",
-      "Affordable solution"
-    ],
-    image: "/assets/images/bonding.jpg"
-  },
-
-  // Restorative Dentistry Services
-  {
-    id: 4,
-    title: "Dental Implants",
-    description: "Restore your smile with permanent, natural-looking dental implant solutions.",
-    category: "restorative",
-    features: [
-      "Titanium root replacement",
-      "Natural-looking crown",
-      "Permanent solution",
-      "Preserves jaw bone"
-    ],
-    image: "/assets/images/implants.jpg"
-  },
-  {
-    id: 5,
-    title: "Ceramic Crowns",
-    description: "Protect and restore damaged teeth with custom-made ceramic crowns.",
-    category: "restorative",
-    features: [
-      "Same-day CEREC crowns",
-      "Natural appearance",
-      "Durable material",
-      "Perfect fit"
-    ],
-    image: "/assets/images/crowns.jpg"
-  },
-  {
-    id: 6,
-    title: "Dental Bridges",
-    description: "Fill gaps in your smile with custom-designed dental bridges.",
-    category: "restorative",
-    features: [
-      "Fixed or removable options",
-      "Natural appearance",
-      "Restored functionality",
-      "Long-lasting results"
-    ],
-    image: "/assets/images/bridges.jpg"
-  },
-
-  // Preventive Care Services
-  {
-    id: 7,
-    title: "Comprehensive Check-ups",
-    description: "Maintain optimal oral health with regular dental examinations and cleanings.",
-    category: "preventive",
-    features: [
-      "Digital X-rays",
-      "Oral cancer screening",
-      "Periodontal evaluation",
-      "Professional cleaning"
+      "Wygładzenie tekstury skóry",
+      "Redukcja drobnych zmarszczek",
+      "Poprawa owalu twarzy",
+      "Bez okresu rekonwalescencji"
     ],
     image: "/assets/images/checkup.jpg"
   },
   {
-    id: 8,
-    title: "Dental Sealants",
-    description: "Protect vulnerable teeth from decay with dental sealants.",
-    category: "preventive",
+    id: 4,
+    title: "Mezoterapia igłowa",
+    description: "Podanie koktajlu witaminowego bezpośrednio w skórę dla jej głębokiego nawilżenia i odmłodzenia.",
+    category: "twarz",
     features: [
-      "Cavity prevention",
-      "Quick application",
-      "Long-lasting protection",
-      "Ideal for children"
+      "Intensywne nawilżenie skóry",
+      "Redukcja zmarszczek",
+      "Poprawa elastyczności cery",
+      "Indywidualny dobór koktajlu"
     ],
-    image: "/assets/images/sealants.jpg"
+    image: "/assets/images/implants.jpg"
   },
 
-  // Surgical Services
+  // Ciało
   {
-    id: 9,
-    title: "Wisdom Teeth Removal",
-    description: "Safe and comfortable extraction of problematic wisdom teeth.",
-    category: "surgical",
+    id: 5,
+    title: "Masaż relaksacyjny ciała",
+    description: "Profesjonalny masaż całego ciała redukujący napięcia i przywracający równowagę.",
+    category: "cialo",
     features: [
-      "Sedation options",
-      "Expert care",
-      "Quick recovery",
-      "Pain management"
-    ],
-    image: "/assets/images/wisdom.jpg"
-  },
-  {
-    id: 10,
-    title: "Bone Grafting",
-    description: "Strengthen your jaw bone for dental implants or other procedures.",
-    category: "surgical",
-    features: [
-      "Advanced techniques",
-      "Promotes healing",
-      "Implant preparation",
-      "Minimally invasive"
-    ],
-    image: "/assets/images/bone-graft.jpg"
-  },
-
-  // Orthodontic Services
-  {
-    id: 11,
-    title: "Invisible Aligners",
-    description: "Straighten your teeth discreetly with custom clear aligners.",
-    category: "orthodontic",
-    features: [
-      "Nearly invisible",
-      "Removable trays",
-      "Custom-made",
-      "Comfortable fit"
-    ],
-    image: "/assets/images/aligners.jpg"
-  },
-  {
-    id: 12,
-    title: "Traditional Braces",
-    description: "Achieve a perfect smile with modern orthodontic solutions.",
-    category: "orthodontic",
-    features: [
-      "Multiple options available",
-      "Regular adjustments",
-      "Effective treatment",
-      "Suitable for all ages"
-    ],
-    image: "/assets/images/braces.jpg"
-  },
-
-  // Pediatric Services
-  {
-    id: 13,
-    title: "Children's Dentistry",
-    description: "Specialized dental care for our youngest patients in a friendly environment.",
-    category: "pediatric",
-    features: [
-      "Child-friendly atmosphere",
-      "Preventive care",
-      "Early intervention",
-      "Education focused"
-    ],
-    image: "/assets/images/pediatric.jpg"
-  },
-  {
-    id: 14,
-    title: "Space Maintainers",
-    description: "Preserve space for permanent teeth after premature loss of baby teeth.",
-    category: "pediatric",
-    features: [
-      "Custom-fitted",
-      "Comfortable wear",
-      "Prevents misalignment",
-      "Easy maintenance"
-    ],
-    image: "/assets/images/space-maintainers.jpg"
-  },
-
-  // Periodontal Services
-  {
-    id: 15,
-    title: "Gum Disease Treatment",
-    description: "Comprehensive treatment for various stages of periodontal disease.",
-    category: "periodontal",
-    features: [
-      "Deep cleaning",
-      "Laser therapy",
-      "Maintenance program",
-      "Prevention focus"
+      "Redukcja stresu i napięcia mięśniowego",
+      "Poprawa krążenia",
+      "Aromaterapia w cenie",
+      "60 lub 90 minut"
     ],
     image: "/assets/images/periodontal.jpg"
   },
   {
-    id: 16,
-    title: "Gum Grafting",
-    description: "Restore receding gums and protect exposed root surfaces.",
-    category: "periodontal",
+    id: 6,
+    title: "Zabieg antycellulitowy",
+    description: "Intensywny zabieg modelujący sylwetkę i redukujący cellulit na udach, brzuchu i pośladkach.",
+    category: "cialo",
     features: [
-      "Natural tissue repair",
-      "Reduced sensitivity",
-      "Improved aesthetics",
-      "Long-term results"
+      "Widoczna redukcja cellulitu",
+      "Modelowanie sylwetki",
+      "Drenaż limfatyczny",
+      "Seria 6–10 zabiegów"
     ],
-    image: "/assets/images/gum-graft.jpg"
+    image: "/assets/images/bone-graft.jpg"
   },
 
-  // Endodontic Services
+  // Makijaż permanentny
   {
-    id: 17,
-    title: "Root Canal Therapy",
-    description: "Save infected teeth with modern root canal treatment.",
-    category: "endodontic",
+    id: 7,
+    title: "Makijaż permanentny brwi",
+    description: "Trwałe wypełnienie i nadanie kształtu brwiom metodą pudrową lub ombre dla naturalnego efektu.",
+    category: "makijaz",
     features: [
-      "Painless procedure",
-      "Tooth preservation",
-      "Advanced techniques",
-      "Same-day treatment"
+      "Metoda pudrowa lub ombre",
+      "Trwałość 1–2 lata",
+      "Indywidualny dobór kształtu",
+      "Korekcja w cenie zabiegu"
     ],
-    image: "/assets/images/root-canal.jpg"
+    image: "/assets/images/smile-design.jpg"
   },
   {
-    id: 18,
-    title: "Microsurgery",
-    description: "Precision endodontic procedures using microscopic visualization.",
-    category: "endodontic",
+    id: 8,
+    title: "Makijaż permanentny ust",
+    description: "Trwałe podkreślenie konturu i koloru ust dla perfekcyjnego uśmiechu bez codziennego makijażu.",
+    category: "makijaz",
     features: [
-      "High magnification",
-      "Precise treatment",
-      "Better outcomes",
-      "Complex case handling"
+      "Korekcja asymetrii ust",
+      "Naturalny lub wyraźny kontur",
+      "Trwałość 1–2 lata",
+      "Szeroki wybór kolorów"
+    ],
+    image: "/assets/images/cosmetic.jpg"
+  },
+
+  // Rzęsy i brwi
+  {
+    id: 9,
+    title: "Przedłużanie rzęs",
+    description: "Aplikacja sztucznych rzęs metodą 1:1 lub objętościową dla głębokiego i wyrazistego spojrzenia.",
+    category: "rzesy",
+    features: [
+      "Metoda klasyczna lub objętościowa",
+      "Trwałość 3–4 tygodnie",
+      "Dobór długości i krzywizny",
+      "Delikatny klej hypoalergiczny"
+    ],
+    image: "/assets/images/aligners.jpg"
+  },
+  {
+    id: 10,
+    title: "Lifting i laminacja rzęs",
+    description: "Trwałe podkręcenie własnych rzęs z farbowaniem dla efektu otwartego, intensywnego spojrzenia.",
+    category: "rzesy",
+    features: [
+      "Utrwalone podkręcenie na 6–8 tygodni",
+      "Farbowanie w cenie",
+      "Bez sztucznych rzęs",
+      "Naturalny i wyrazisty efekt"
+    ],
+    image: "/assets/images/braces.jpg"
+  },
+
+  // Paznokcie
+  {
+    id: 11,
+    title: "Manicure hybrydowy",
+    description: "Profesjonalna pielęgnacja dłoni z aplikacją lakieru hybrydowego o długotrwałym efekcie.",
+    category: "paznokcie",
+    features: [
+      "Pielęgnacja skórek i płytki",
+      "Trwałość 3–4 tygodnie",
+      "Szeroka paleta kolorów",
+      "Wzmocnienie i odbudowa paznokci"
+    ],
+    image: "/assets/images/crowns.jpg"
+  },
+  {
+    id: 12,
+    title: "Pedicure klasyczny",
+    description: "Kompleksowa pielęgnacja stóp i paznokci przywracająca komfort i zadbany wygląd.",
+    category: "paznokcie",
+    features: [
+      "Usuwanie naskórka i odcisków",
+      "Pielęgnacja płytki i skórek",
+      "Peeling i masaż stóp",
+      "Lakierowanie w cenie"
+    ],
+    image: "/assets/images/sealants.jpg"
+  },
+
+  // Depilacja
+  {
+    id: 13,
+    title: "Depilacja woskiem",
+    description: "Skuteczne usuwanie owłosienia z dowolnych partii ciała ciepłym lub zimnym woskiem.",
+    category: "depilacja",
+    features: [
+      "Nogi, pachy, bikini i więcej",
+      "Wosk ciepły lub taśmowy",
+      "Gładka skóra na 3–4 tygodnie",
+      "Stopniowe osłabianie owłosienia"
+    ],
+    image: "/assets/images/wisdom.jpg"
+  },
+  {
+    id: 14,
+    title: "Depilacja laserowa",
+    description: "Trwałe ograniczenie wzrostu owłosienia przy użyciu nowoczesnego lasera diodowego.",
+    category: "depilacja",
+    features: [
+      "Skuteczna na większości typów skóry",
+      "Seria 6–8 zabiegów",
+      "Bezbolesna i precyzyjna",
+      "Trwałe efekty"
     ],
     image: "/assets/images/microsurgery.jpg"
   },
-
-  // Technology Services
-  {
-    id: 19,
-    title: "3D CBCT Imaging",
-    description: "State-of-the-art imaging for precise diagnosis and treatment planning.",
-    category: "technology",
-    features: [
-      "3D visualization",
-      "Low radiation",
-      "Detailed analysis",
-      "Treatment planning"
-    ],
-    image: "/assets/images/cbct.jpg"
-  },
-  {
-    id: 20,
-    title: "Digital Smile Design",
-    description: "Preview your new smile with advanced digital design technology.",
-    category: "technology",
-    features: [
-      "Virtual preview",
-      "Treatment simulation",
-      "Custom planning",
-      "Predictable results"
-    ],
-    image: "/assets/images/smile-design.jpg"
-  }
 ];
 
 export default function Services() {
   const [activeCategory, setActiveCategory] = useState("all");
 
-  const filteredServices = activeCategory === "all" 
-    ? services 
+  const filteredServices = activeCategory === "all"
+    ? services
     : services.filter(service => service.category === activeCategory);
 
   return (
@@ -311,21 +224,21 @@ export default function Services() {
       <section className="relative py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <motion.h1 
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="font-heading text-4xl md:text-5xl lg:text-6xl text-white mb-6"
             >
-              Our Premium Services
+              Nasze usługi
             </motion.h1>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="font-body text-lg text-white max-w-3xl mx-auto mb-12"
             >
-              Experience world-class dental care with our comprehensive range of services, delivered with precision and luxury in mind.
+              Profesjonalne zabiegi kosmetologiczne wykonywane z najwyższą starannością i dbałością o Twoje piękno.
             </motion.p>
           </div>
         </div>
@@ -355,7 +268,7 @@ export default function Services() {
       {/* Services Grid */}
       <section className="py-12 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -405,19 +318,19 @@ export default function Services() {
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-heading text-3xl md:text-4xl text-white mb-6">
-            Ready to Experience Luxury Dental Care?
+            Gotowa na zabieg?
           </h2>
           <p className="font-body text-lg text-white mb-8 max-w-2xl mx-auto">
-            Schedule your consultation today and discover the perfect treatment plan for your smile.
+            Umów się na konsultację i razem dobierzemy idealne zabiegi dopasowane do Twoich potrzeb.
           </p>
-          <Link 
+          <Link
             href="/appointment"
             className="inline-block bg-primary-gold hover:bg-primary-gold text-black font-ui text-sm tracking-wide px-12 py-4 rounded-full transition-all duration-300"
           >
-            Book Your Consultation
+            Umów wizytę
           </Link>
         </div>
       </section>
     </main>
   );
-} 
+}
