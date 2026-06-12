@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -16,7 +15,6 @@ const categories = [
 ];
 
 const services = [
-  // Twarz
   {
     id: 1,
     title: "Oczyszczanie twarzy",
@@ -28,7 +26,6 @@ const services = [
       "Odpowiednia dla każdego typu cery",
       "Natychmiastowy efekt świeżości"
     ],
-    image: "/assets/images/cosmetic.jpg"
   },
   {
     id: 2,
@@ -41,7 +38,6 @@ const services = [
       "Stymulacja produkcji kolagenu",
       "Widoczne efekty już po pierwszym zabiegu"
     ],
-    image: "/assets/images/whitening.jpg"
   },
   {
     id: 3,
@@ -54,7 +50,6 @@ const services = [
       "Poprawa owalu twarzy",
       "Bez okresu rekonwalescencji"
     ],
-    image: "/assets/images/checkup.jpg"
   },
   {
     id: 4,
@@ -67,10 +62,7 @@ const services = [
       "Poprawa elastyczności cery",
       "Indywidualny dobór koktajlu"
     ],
-    image: "/assets/images/implants.jpg"
   },
-
-  // Ciało
   {
     id: 5,
     title: "Masaż relaksacyjny ciała",
@@ -82,7 +74,6 @@ const services = [
       "Aromaterapia w cenie",
       "60 lub 90 minut"
     ],
-    image: "/assets/images/periodontal.jpg"
   },
   {
     id: 6,
@@ -95,10 +86,7 @@ const services = [
       "Drenaż limfatyczny",
       "Seria 6–10 zabiegów"
     ],
-    image: "/assets/images/bone-graft.jpg"
   },
-
-  // Makijaż permanentny
   {
     id: 7,
     title: "Makijaż permanentny brwi",
@@ -110,7 +98,6 @@ const services = [
       "Indywidualny dobór kształtu",
       "Korekcja w cenie zabiegu"
     ],
-    image: "/assets/images/smile-design.jpg"
   },
   {
     id: 8,
@@ -123,10 +110,7 @@ const services = [
       "Trwałość 1–2 lata",
       "Szeroki wybór kolorów"
     ],
-    image: "/assets/images/cosmetic.jpg"
   },
-
-  // Rzęsy i brwi
   {
     id: 9,
     title: "Przedłużanie rzęs",
@@ -138,7 +122,6 @@ const services = [
       "Dobór długości i krzywizny",
       "Delikatny klej hypoalergiczny"
     ],
-    image: "/assets/images/aligners.jpg"
   },
   {
     id: 10,
@@ -151,10 +134,7 @@ const services = [
       "Bez sztucznych rzęs",
       "Naturalny i wyrazisty efekt"
     ],
-    image: "/assets/images/braces.jpg"
   },
-
-  // Paznokcie
   {
     id: 11,
     title: "Manicure hybrydowy",
@@ -166,7 +146,6 @@ const services = [
       "Szeroka paleta kolorów",
       "Wzmocnienie i odbudowa paznokci"
     ],
-    image: "/assets/images/crowns.jpg"
   },
   {
     id: 12,
@@ -179,10 +158,7 @@ const services = [
       "Peeling i masaż stóp",
       "Lakierowanie w cenie"
     ],
-    image: "/assets/images/sealants.jpg"
   },
-
-  // Depilacja
   {
     id: 13,
     title: "Depilacja woskiem",
@@ -194,7 +170,6 @@ const services = [
       "Gładka skóra na 3–4 tygodnie",
       "Stopniowe osłabianie owłosienia"
     ],
-    image: "/assets/images/wisdom.jpg"
   },
   {
     id: 14,
@@ -207,7 +182,6 @@ const services = [
       "Bezbolesna i precyzyjna",
       "Trwałe efekty"
     ],
-    image: "/assets/images/microsurgery.jpg"
   },
 ];
 
@@ -221,14 +195,14 @@ export default function Services() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative py-20 bg-black">
+      <section className="relative py-20 bg-charcoal">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="font-heading text-4xl md:text-5xl lg:text-6xl text-white mb-6"
+              className="font-heading text-4xl md:text-5xl lg:text-6xl text-warm-white mb-6"
             >
               Nasze usługi
             </motion.h1>
@@ -236,7 +210,7 @@ export default function Services() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="font-body text-lg text-white max-w-3xl mx-auto mb-12"
+              className="font-body text-lg text-champagne max-w-3xl mx-auto mb-12"
             >
               Profesjonalne zabiegi kosmetologiczne wykonywane z najwyższą starannością i dbałością o Twoje piękno.
             </motion.p>
@@ -245,7 +219,7 @@ export default function Services() {
       </section>
 
       {/* Category Navigation */}
-      <section className="py-10 sm:py-12 bg-white border-b border-primary-gold">
+      <section className="py-10 sm:py-12 bg-warm-white border-b border-beige">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
             {categories.map((category) => (
@@ -254,8 +228,8 @@ export default function Services() {
                 onClick={() => setActiveCategory(category.id)}
                 className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full font-ui text-sm tracking-wide transition-all duration-300 ${
                   activeCategory === category.id
-                    ? "bg-primary-gold text-black"
-                    : "bg-white text-black border-2 border-primary-gold hover:bg-primary-gold hover:text-black"
+                    ? "bg-primary-gold text-charcoal"
+                    : "bg-ivory text-charcoal border-2 border-beige hover:bg-primary-gold hover:text-charcoal"
                 }`}
               >
                 {category.name}
@@ -266,7 +240,7 @@ export default function Services() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-white">
+      <section className="py-12 sm:py-16 lg:py-20 bg-ivory">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10"
@@ -280,30 +254,29 @@ export default function Services() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white border border-primary-gold rounded-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300 flex flex-col"
+                className="bg-warm-white border border-beige rounded-lg overflow-hidden group hover:shadow-md transition-shadow duration-300 flex flex-col"
               >
-                <div className="relative h-52 sm:h-56 lg:h-64 overflow-hidden">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300" />
+                <div className="relative h-52 sm:h-56 lg:h-64 overflow-hidden bg-beige">
+                  <div className="w-full h-full flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="text-primary-gold/30 text-3xl mb-2 font-heading leading-none">◇</div>
+                      <p className="font-ui text-[9px] text-muted/50 tracking-[0.2em] uppercase">Zdjęcie wkrótce</p>
+                    </div>
+                  </div>
                   <div className="absolute top-4 right-4">
-                    <span className="px-4 py-1.5 bg-primary-gold text-black text-xs font-ui tracking-wider rounded-full">
+                    <span className="px-4 py-1.5 bg-primary-gold text-charcoal text-xs font-ui tracking-wider rounded-full">
                       {categories.find(cat => cat.id === service.category)?.name}
                     </span>
                   </div>
                 </div>
                 <div className="p-6 lg:p-8 flex-grow flex flex-col">
-                  <h2 className="font-heading text-xl lg:text-2xl text-black mb-4">{service.title}</h2>
-                  <p className="font-body text-black mb-6">{service.description}</p>
+                  <h2 className="font-heading text-xl lg:text-2xl text-charcoal mb-4">{service.title}</h2>
+                  <p className="font-body text-muted mb-6">{service.description}</p>
                   <div className="space-y-3 mt-auto">
                     {service.features.map((feature, idx) => (
                       <div key={idx} className="flex items-start">
                         <div className="w-2 h-2 bg-primary-gold rounded-full mr-3 mt-1.5 flex-shrink-0"></div>
-                        <span className="font-ui text-black">{feature}</span>
+                        <span className="font-ui text-charcoal text-sm">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -315,17 +288,17 @@ export default function Services() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-charcoal">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-heading text-3xl md:text-4xl text-white mb-6">
+          <h2 className="font-heading text-3xl md:text-4xl text-warm-white mb-6">
             Gotowa na zabieg?
           </h2>
-          <p className="font-body text-lg text-white mb-8 max-w-2xl mx-auto">
+          <p className="font-body text-lg text-champagne mb-8 max-w-2xl mx-auto">
             Umów się na konsultację i razem dobierzemy idealne zabiegi dopasowane do Twoich potrzeb.
           </p>
           <Link
             href="/appointment"
-            className="inline-block bg-primary-gold hover:bg-primary-gold text-black font-ui text-sm tracking-wide px-12 py-4 rounded-full transition-all duration-300"
+            className="inline-block bg-primary-gold hover:opacity-80 text-charcoal font-ui text-sm tracking-wide px-12 py-4 rounded-full transition-all duration-300"
           >
             Umów wizytę
           </Link>

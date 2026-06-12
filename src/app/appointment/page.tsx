@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { RiCalendarLine, RiTimeLine, RiUserLine, RiPhoneLine, RiMailLine, RiFileTextLine } from 'react-icons/ri';
 
@@ -24,6 +23,9 @@ const timeSlots = [
   "16:00", "17:00"
 ];
 
+const inputClass = "w-full px-4 py-3 border border-beige rounded-lg font-body text-charcoal bg-warm-white focus:outline-none focus:ring-2 focus:ring-primary-gold transition-colors";
+const inputWithIconClass = "w-full pl-12 pr-4 py-3 border border-beige rounded-lg font-body text-charcoal bg-warm-white focus:outline-none focus:ring-2 focus:ring-primary-gold transition-colors";
+
 export default function Appointment() {
   const [formData, setFormData] = useState({
     name: "",
@@ -42,32 +44,20 @@ export default function Appointment() {
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative py-20 bg-black">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/assets/images/booking-hero.jpg"
-            alt="Umów wizytę w Ewa Świerżak Kosmetologia"
-            fill
-            className="object-cover opacity-30"
-            priority
-          />
-        </div>
+      <section className="relative py-20 bg-charcoal">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="font-heading text-4xl md:text-5xl lg:text-6xl text-white mb-6"
+              className="font-heading text-4xl md:text-5xl lg:text-6xl text-warm-white mb-6"
             >
               Umów wizytę
             </motion.h1>
@@ -75,7 +65,7 @@ export default function Appointment() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="font-body text-lg text-white max-w-3xl mx-auto"
+              className="font-body text-lg text-champagne max-w-3xl mx-auto"
             >
               Zarezerwuj termin i pozwól nam zadbać o Twoje piękno w wyjątkowej atmosferze.
             </motion.p>
@@ -84,7 +74,7 @@ export default function Appointment() {
       </section>
 
       {/* Booking Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-ivory">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Booking Form */}
@@ -93,14 +83,13 @@ export default function Appointment() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="bg-white p-8 rounded-lg border border-primary-gold"
+              className="bg-warm-white p-8 rounded-lg border border-beige shadow-md"
             >
-              <h2 className="font-heading text-3xl text-black mb-6">Zarezerwuj termin</h2>
+              <h2 className="font-heading text-3xl text-charcoal mb-6">Zarezerwuj termin</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
-                {/* Personal Information */}
                 <div className="space-y-6">
                   <div>
-                    <label htmlFor="name" className="block font-ui text-sm text-black mb-2">
+                    <label htmlFor="name" className="block font-ui text-sm text-charcoal mb-2">
                       Imię i nazwisko
                     </label>
                     <div className="relative">
@@ -111,13 +100,13 @@ export default function Appointment() {
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full pl-12 pr-4 py-3 border border-primary-gold rounded-lg font-body text-black focus:outline-none focus:ring-2 focus:ring-primary-gold"
+                        className={inputWithIconClass}
                         required
                       />
                     </div>
                   </div>
                   <div>
-                    <label htmlFor="email" className="block font-ui text-sm text-black mb-2">
+                    <label htmlFor="email" className="block font-ui text-sm text-charcoal mb-2">
                       Adres e-mail
                     </label>
                     <div className="relative">
@@ -128,13 +117,13 @@ export default function Appointment() {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full pl-12 pr-4 py-3 border border-primary-gold rounded-lg font-body text-black focus:outline-none focus:ring-2 focus:ring-primary-gold"
+                        className={inputWithIconClass}
                         required
                       />
                     </div>
                   </div>
                   <div>
-                    <label htmlFor="phone" className="block font-ui text-sm text-black mb-2">
+                    <label htmlFor="phone" className="block font-ui text-sm text-charcoal mb-2">
                       Numer telefonu
                     </label>
                     <div className="relative">
@@ -145,17 +134,16 @@ export default function Appointment() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full pl-12 pr-4 py-3 border border-primary-gold rounded-lg font-body text-black focus:outline-none focus:ring-2 focus:ring-primary-gold"
+                        className={inputWithIconClass}
                         required
                       />
                     </div>
                   </div>
                 </div>
 
-                {/* Appointment Details */}
                 <div className="space-y-6">
                   <div>
-                    <label htmlFor="service" className="block font-ui text-sm text-black mb-2">
+                    <label htmlFor="service" className="block font-ui text-sm text-charcoal mb-2">
                       Rodzaj zabiegu
                     </label>
                     <select
@@ -163,7 +151,7 @@ export default function Appointment() {
                       name="service"
                       value={formData.service}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-primary-gold rounded-lg font-body text-black focus:outline-none focus:ring-2 focus:ring-primary-gold"
+                      className={inputClass}
                       required
                     >
                       <option value="">Wybierz zabieg</option>
@@ -176,7 +164,7 @@ export default function Appointment() {
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="date" className="block font-ui text-sm text-black mb-2">
+                      <label htmlFor="date" className="block font-ui text-sm text-charcoal mb-2">
                         Preferowana data
                       </label>
                       <div className="relative">
@@ -187,13 +175,13 @@ export default function Appointment() {
                           name="date"
                           value={formData.date}
                           onChange={handleChange}
-                          className="w-full pl-12 pr-4 py-3 border border-primary-gold rounded-lg font-body text-black focus:outline-none focus:ring-2 focus:ring-primary-gold"
+                          className={inputWithIconClass}
                           required
                         />
                       </div>
                     </div>
                     <div>
-                      <label htmlFor="time" className="block font-ui text-sm text-black mb-2">
+                      <label htmlFor="time" className="block font-ui text-sm text-charcoal mb-2">
                         Preferowana godzina
                       </label>
                       <div className="relative">
@@ -203,14 +191,12 @@ export default function Appointment() {
                           name="time"
                           value={formData.time}
                           onChange={handleChange}
-                          className="w-full pl-12 pr-4 py-3 border border-primary-gold rounded-lg font-body text-black focus:outline-none focus:ring-2 focus:ring-primary-gold"
+                          className={inputWithIconClass}
                           required
                         >
                           <option value="">Wybierz godzinę</option>
                           {timeSlots.map((slot) => (
-                            <option key={slot} value={slot}>
-                              {slot}
-                            </option>
+                            <option key={slot} value={slot}>{slot}</option>
                           ))}
                         </select>
                       </div>
@@ -218,39 +204,29 @@ export default function Appointment() {
                   </div>
                 </div>
 
-                {/* Additional Information */}
                 <div className="space-y-6">
                   <div>
-                    <label className="block font-ui text-sm text-black mb-2">
+                    <label className="block font-ui text-sm text-charcoal mb-2">
                       Czy jesteś nową klientką?
                     </label>
                     <div className="flex space-x-6">
-                      <label className="flex items-center">
-                        <input
-                          type="radio"
-                          name="isNewClient"
-                          value="yes"
-                          checked={formData.isNewClient === "yes"}
-                          onChange={handleChange}
-                          className="form-radio text-primary-gold focus:ring-primary-gold"
-                        />
-                        <span className="ml-2 font-body text-black">Tak</span>
-                      </label>
-                      <label className="flex items-center">
-                        <input
-                          type="radio"
-                          name="isNewClient"
-                          value="no"
-                          checked={formData.isNewClient === "no"}
-                          onChange={handleChange}
-                          className="form-radio text-primary-gold focus:ring-primary-gold"
-                        />
-                        <span className="ml-2 font-body text-black">Nie</span>
-                      </label>
+                      {[{ value: "yes", label: "Tak" }, { value: "no", label: "Nie" }].map((opt) => (
+                        <label key={opt.value} className="flex items-center">
+                          <input
+                            type="radio"
+                            name="isNewClient"
+                            value={opt.value}
+                            checked={formData.isNewClient === opt.value}
+                            onChange={handleChange}
+                            className="form-radio text-primary-gold focus:ring-primary-gold"
+                          />
+                          <span className="ml-2 font-body text-charcoal">{opt.label}</span>
+                        </label>
+                      ))}
                     </div>
                   </div>
                   <div>
-                    <label htmlFor="notes" className="block font-ui text-sm text-black mb-2">
+                    <label htmlFor="notes" className="block font-ui text-sm text-charcoal mb-2">
                       Dodatkowe uwagi
                     </label>
                     <div className="relative">
@@ -261,7 +237,7 @@ export default function Appointment() {
                         value={formData.notes}
                         onChange={handleChange}
                         rows={4}
-                        className="w-full pl-12 pr-4 py-3 border border-primary-gold rounded-lg font-body text-black focus:outline-none focus:ring-2 focus:ring-primary-gold resize-none"
+                        className={`${inputWithIconClass} resize-none`}
                         placeholder="Wszelkie uwagi lub pytania dotyczące zabiegu..."
                       ></textarea>
                     </div>
@@ -270,7 +246,7 @@ export default function Appointment() {
 
                 <button
                   type="submit"
-                  className="w-full bg-black text-white font-ui text-sm tracking-wide px-8 py-4 rounded-full hover:bg-primary-gold transition-all duration-300"
+                  className="w-full bg-charcoal text-warm-white font-ui text-sm tracking-wide px-8 py-4 rounded-full hover:bg-primary-gold hover:text-charcoal transition-all duration-300"
                 >
                   Umów wizytę
                 </button>
@@ -284,30 +260,25 @@ export default function Appointment() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 rounded-lg border border-primary-gold"
+                className="bg-warm-white p-8 rounded-lg border border-beige shadow-md"
               >
-                <h3 className="font-heading text-2xl text-black mb-6">Czego możesz się spodziewać</h3>
+                <h3 className="font-heading text-2xl text-charcoal mb-6">Czego możesz się spodziewać</h3>
                 <div className="space-y-4">
-                  <p className="font-body text-black">
+                  <p className="font-body text-charcoal">
                     Twoja wizyta rozpocznie się od indywidualnej konsultacji. Nasz zespół:
                   </p>
                   <ul className="space-y-3">
-                    <li className="flex items-start">
-                      <div className="w-2 h-2 bg-primary-gold rounded-full mt-2 mr-3"></div>
-                      <span className="font-body text-black">Przeprowadzi szczegółową analizę skóry lub potrzeb</span>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="w-2 h-2 bg-primary-gold rounded-full mt-2 mr-3"></div>
-                      <span className="font-body text-black">Omówi Twoje oczekiwania i cele</span>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="w-2 h-2 bg-primary-gold rounded-full mt-2 mr-3"></div>
-                      <span className="font-body text-black">Zaproponuje indywidualny plan zabiegów</span>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="w-2 h-2 bg-primary-gold rounded-full mt-2 mr-3"></div>
-                      <span className="font-body text-black">Odpowie na wszystkie Twoje pytania</span>
-                    </li>
+                    {[
+                      "Przeprowadzi szczegółową analizę skóry lub potrzeb",
+                      "Omówi Twoje oczekiwania i cele",
+                      "Zaproponuje indywidualny plan zabiegów",
+                      "Odpowie na wszystkie Twoje pytania",
+                    ].map((item) => (
+                      <li key={item} className="flex items-start">
+                        <div className="w-2 h-2 bg-primary-gold rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <span className="font-body text-muted">{item}</span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </motion.div>
@@ -317,25 +288,23 @@ export default function Appointment() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-black p-8 rounded-lg"
+                className="bg-charcoal p-8 rounded-lg"
               >
-                <h3 className="font-heading text-2xl text-white mb-6">Nowa klientka? Specjalna oferta</h3>
-                <p className="font-body text-white mb-6">
+                <h3 className="font-heading text-2xl text-warm-white mb-6">Nowa klientka? Specjalna oferta</h3>
+                <p className="font-body text-champagne mb-6">
                   Podczas pierwszej wizyty otrzymasz bezpłatną konsultację kosmetologiczną i analizę skóry.
                 </p>
                 <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-primary-gold rounded-full mt-2 mr-3"></div>
-                    <span className="font-body text-white">Dokładna analiza skóry i potrzeb</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-primary-gold rounded-full mt-2 mr-3"></div>
-                    <span className="font-body text-white">Dobór odpowiednich zabiegów</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-primary-gold rounded-full mt-2 mr-3"></div>
-                    <span className="font-body text-white">Indywidualny plan pielęgnacji</span>
-                  </li>
+                  {[
+                    "Dokładna analiza skóry i potrzeb",
+                    "Dobór odpowiednich zabiegów",
+                    "Indywidualny plan pielęgnacji",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start">
+                      <div className="w-2 h-2 bg-primary-gold rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="font-body text-champagne">{item}</span>
+                    </li>
+                  ))}
                 </ul>
               </motion.div>
 
@@ -344,13 +313,13 @@ export default function Appointment() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 rounded-lg border border-primary-gold"
+                className="bg-warm-white p-8 rounded-lg border border-beige shadow-md"
               >
-                <h3 className="font-heading text-2xl text-black mb-6">Formy płatności</h3>
-                <p className="font-body text-black mb-4">
+                <h3 className="font-heading text-2xl text-charcoal mb-6">Formy płatności</h3>
+                <p className="font-body text-muted mb-4">
                   Akceptujemy płatności gotówką oraz kartą płatniczą.
                 </p>
-                <p className="font-body text-black">
+                <p className="font-body text-muted">
                   W razie konieczności odwołania wizyty prosimy o kontakt z co najmniej 24-godzinnym wyprzedzeniem.
                 </p>
               </motion.div>

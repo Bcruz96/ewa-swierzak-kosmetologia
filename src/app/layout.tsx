@@ -1,22 +1,34 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Cormorant_Garamond, Montserrat, Nunito } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const cormorantGaramond = Cormorant_Garamond({
+  subsets: ["latin", "latin-ext"],
+  weight: ["300", "400", "500", "600"],
+  style: ["normal", "italic"],
+  variable: "--font-heading",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const montserrat = Montserrat({
+  subsets: ["latin", "latin-ext"],
+  weight: ["300", "400", "500"],
+  variable: "--font-body",
+  display: "swap",
+});
+
+const nunito = Nunito({
+  subsets: ["latin", "latin-ext"],
+  weight: ["300", "400", "500", "600"],
+  variable: "--font-ui",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Ewa Świerżak Kosmetologia",
-  description: "Luksusowy salon kosmetyczny Ewa Świerżak Kosmetologia. Profesjonalne zabiegi pielęgnacyjne, makijaż permanentny, stylizacja rzęs i wiele więcej.",
+  title: "Ewa Świerzak Kosmetologia",
+  description: "Luksusowy salon kosmetyczny Ewa Świerzak Kosmetologia. Profesjonalne zabiegi pielęgnacyjne, makijaż permanentny, stylizacja rzęs i wiele więcej.",
 };
 
 export default function RootLayout({
@@ -27,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="pl">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${cormorantGaramond.variable} ${montserrat.variable} ${nunito.variable} antialiased bg-ivory`}
       >
         <Navbar />
         {children}

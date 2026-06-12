@@ -10,24 +10,30 @@ export default {
   theme: {
     extend: {
       colors: {
+        'ivory': '#F8F4EC',
+        'warm-white': '#FFFDF8',
+        'beige': '#E8DDCC',
+        'champagne': '#D6BE8A',
+        'charcoal': '#2C2723',
+        'muted': '#7A6E61',
         primary: {
-          DEFAULT: '#000000', // Black
-          gold: '#D4AF37', // Gold
-          white: '#FFFFFF', // White
+          DEFAULT: '#2C2723',
+          gold: '#B89B5E',
+          white: '#FFFDF8',
         },
         background: {
-          light: '#FFFFFF',
-          dark: '#121212',
+          light: '#F8F4EC',
+          dark: '#2C2723',
         },
         text: {
-          light: '#000000',
-          dark: '#FFFFFF',
+          light: '#FFFDF8',
+          dark: '#2C2723',
         },
       },
       fontFamily: {
-        heading: ['Cormorant Garamond', 'serif'],
-        body: ['Montserrat', 'sans-serif'],
-        ui: ['Nunito', 'sans-serif'],
+        heading: ['var(--font-heading)', 'Cormorant Garamond', 'serif'],
+        body: ['var(--font-body)', 'Montserrat', 'sans-serif'],
+        ui: ['var(--font-ui)', 'Nunito', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
