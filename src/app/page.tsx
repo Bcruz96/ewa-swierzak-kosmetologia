@@ -45,17 +45,17 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-4"
+              className="flex flex-col sm:flex-row sm:items-center gap-4"
             >
               <Link
                 href="/appointment"
-                className="inline-block bg-primary-gold hover:opacity-80 text-charcoal font-ui text-sm tracking-wide px-8 py-4 rounded-full transition-all duration-300"
+                className="inline-block bg-primary-gold hover:opacity-80 text-charcoal font-ui text-base tracking-wide px-10 py-5 rounded-full transition-all duration-300"
               >
-                Umów wizytę
+                Umów zabieg
               </Link>
               <Link
                 href="/services"
-                className="inline-block bg-warm-white/10 hover:bg-warm-white/20 text-warm-white border border-warm-white/40 font-ui text-sm tracking-wide px-8 py-4 rounded-full transition-all duration-300"
+                className="inline-block bg-warm-white/10 hover:bg-warm-white/20 text-warm-white border border-warm-white/40 font-ui text-sm tracking-wide px-8 py-5 rounded-full transition-all duration-300"
               >
                 Nasze usługi
               </Link>
